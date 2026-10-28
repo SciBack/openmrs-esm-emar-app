@@ -1,0 +1,31 @@
+@use '@carbon/layout';
+@use '@carbon/type';
+@use '@openmrs/esm-styleguide/src/vars' as *;
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: layout.$spacing-05;
+}
+
+.row {
+  display: flex;
+  gap: layout.$spacing-05;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.version {
+  border-inline-start: 3px solid $ui-03;
+  padding: layout.$spacing-03 layout.$spacing-05;
+  margin-block-end: layout.$spacing-04;
+}
+
+.current {
+  border-inline-start-color: $interactive-01;
+}
+
+.meta {
+  @include type.type-style('helper-text-01');
+  color: $text-02;
+}

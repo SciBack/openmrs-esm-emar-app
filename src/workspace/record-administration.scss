@@ -1,0 +1,79 @@
+@use '@carbon/layout';
+@use '@carbon/type';
+@use '@openmrs/esm-styleguide/src/vars' as *;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.container {
+  margin: layout.$spacing-05;
+}
+
+.orderSummary {
+  border-inline-start: 3px solid $interactive-01;
+  padding: layout.$spacing-03 layout.$spacing-05;
+  background-color: $ui-01;
+}
+
+.orderTitle {
+  @include type.type-style('heading-compact-02');
+}
+
+.orderDetail {
+  @include type.type-style('body-compact-01');
+  color: $text-02;
+}
+
+.dateTime,
+.batch {
+  display: flex;
+  gap: layout.$spacing-05;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.dose {
+  display: flex;
+  gap: layout.$spacing-03;
+  align-items: flex-end;
+  max-inline-size: 20rem;
+}
+
+.unit {
+  @include type.type-style('body-compact-01');
+  padding-block-end: layout.$spacing-03;
+  color: $text-02;
+}
+
+.button {
+  height: layout.$spacing-10;
+  display: flex;
+  align-content: flex-start;
+  align-items: baseline;
+  min-width: 50%;
+}
+
+.tablet {
+  padding: layout.$spacing-06 layout.$spacing-05;
+  background-color: $ui-02;
+}
+
+.desktop {
+  padding: 0;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: layout.$spacing-02;
+  margin-block-start: layout.$spacing-02;
+}
+
+.errorText {
+  @include type.type-style('helper-text-01');
+  color: $danger;
+}

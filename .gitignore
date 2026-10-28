@@ -1,0 +1,13 @@
+target/
+node_modules/
+dist/
+.idea/
+*.iml
+.DS_Store
+coverage/
+.yarn/
+*.tgz
+.eslintcache
+test-results/
+playwright-report/
+e2e/.env

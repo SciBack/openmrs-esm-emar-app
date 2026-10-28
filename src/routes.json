@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json.openmrs.org/routes.schema.json",
+  "backendDependencies": {
+    "webservices.rest": ">=2.2.0",
+    "fhir2": ">=4.3.0",
+    "emar": ">=0.2.0"
+  },
+  "pages": [],
+  "extensions": [
+    {
+      "name": "emar-dashboard-link",
+      "component": "emarDashboardLink",
+      "slot": "patient-chart-dashboard-slot",
+      "order": 4,
+      "privileges": "eMAR: View",
+      "meta": {
+        "slot": "emar-dashboard-slot",
+        "path": "medication-administration",
+        "title": "medicationAdministration",
+        "hideDashboardTitle": true,
+        "layoutMode": "anchored"
+      }
+    },
+    {
+      "name": "emar-dashboard",
+      "component": "emarDashboard",
+      "slot": "emar-dashboard-slot",
+      "privileges": "eMAR: View",
+      "meta": {
+        "fullWidth": true
+      }
+    }
+  ],
+  "modals": [
+    {
+      "name": "emar-countersign-modal",
+      "component": "countersignModal"
+    },
+    {
+      "name": "emar-regularize-modal",
+      "component": "regularizeModal"
+    },
+    {
+      "name": "emar-adverse-reaction-modal",
+      "component": "adverseReactionModal"
+    },
+    {
+      "name": "emar-history-modal",
+      "component": "historyModal"
+    }
+  ],
+  "workspaces2": [
+    {
+      "name": "emar-record-administration-workspace",
+      "component": "recordAdministrationWorkspace",
+      "window": "emar-record-administration-window"
+    }
+  ],
+  "workspaceWindows2": [
+    {
+      "name": "emar-record-administration-window",
+      "group": "patient-chart"
+    }
+  ]
+}
